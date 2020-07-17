@@ -23,4 +23,5 @@ cd "$CLONE_DIR"
 
 git add .
 git commit --message "Update from https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA)"
+git branch "$DST_BRANCH"
 git push origin "$DST_BRANCH"

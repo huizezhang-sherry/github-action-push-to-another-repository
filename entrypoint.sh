@@ -12,7 +12,7 @@ CLONE_DIR=$(mktemp -d)
 # Setup git
 git config --global user.email "$USER_EMAIL"
 git config --global user.name "$GITHUB_USERNAME"
-git clone --single-branch --branch gh-pages "https://$API_TOKEN_GITHUB@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git" "$CLONE_DIR"
+git clone --single-branch --branch "$DST_BRANCH" "https://$API_TOKEN_GITHUB@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git" "$CLONE_DIR"
 
 # Copy files into the git and deletes all git
 sudo find "$CLONE_DIR" | grep -v "^$CLONE_DIR/\.git" | grep -v "^$CLONE_DIR$" | xargs rm -rf # delete all files (to handle deletions)

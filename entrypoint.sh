@@ -7,6 +7,8 @@ GITHUB_REPO="$3"
 USER_EMAIL="$4"
 DST_BRANCH="$5"
 
+cd $FOLDER
+
 # Setup git
 git config --global user.email "$USER_EMAIL"
 git config --global user.name "$GITHUB_USERNAME"

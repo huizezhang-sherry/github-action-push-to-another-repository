@@ -7,6 +7,7 @@ GITHUB_REPO="$3"
 USER_EMAIL="$4"
 DST_BRANCH="$5"
 
+git -rf .git
 cd $FOLDER
 
 # Setup git

@@ -17,5 +17,5 @@ rm -rf .git
 git init
 git add . 
 git commit -m "build website"
-git remote add origin "https://$API_TOKEN_GITHUB@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git"
+git remote add origin "https://$GITHUB_USERNAME:$API_TOKEN_GITHUB@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git"
 git push -u --force origin "$DST_BRANCH"
